@@ -10,7 +10,7 @@ import API from '../../APIurl'
 function Create({
   posts,
 }: {
-  posts: Posts[];
+  posts: Posts;
 }) {
   return (
     <Layout>
@@ -28,7 +28,12 @@ function Create({
 }
 
 export const getServerSideProps: GetServerSideProps = async ({ params }) => {
-  const res = await axios.get(API.base + API.posts + "/" + params.id);
+  if (params !== undefined) {
+    const res = await axios.get(API.base + API.posts + "/" + params.id);
+    const posts = await res.data;
+    return { props: { posts } };
+  }
+  const res = await axios.get(API.base + API.posts);//
   const posts = await res.data;
   return { props: { posts } };
 };
