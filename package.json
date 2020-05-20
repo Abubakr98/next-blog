@@ -1,6 +1,6 @@
 {
-  "name": "learn-starter",
-  "version": "0.1.0",
+  "name": "next-blog",
+  "version": "1.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
