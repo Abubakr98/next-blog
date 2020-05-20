@@ -11,9 +11,8 @@ function PostsFromServer() {
     axios
       .post(APIurl.base + APIurl.posts, input)
       .then(function (response) {
-        console.log(response);
         if (confirm("The post was created, Do you want to go to the created post?")) {
-          window.location.pathname = "/";
+          window.location.pathname = `/posts/${response.data.id}`;
         }
       })
       .catch(function (error) {

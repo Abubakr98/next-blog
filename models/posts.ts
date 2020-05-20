@@ -3,7 +3,7 @@ export type posts = Posts[];
 export default {
   state: [],
   reducers: {
-    setPosts: (state: posts, payload: posts): posts => {
+    setPosts: (state: posts, payload: posts) => {
       console.log(state);
       return payload;
     },

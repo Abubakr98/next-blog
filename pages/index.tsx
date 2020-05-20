@@ -4,22 +4,22 @@ import Layout from "../components/layoutHome";
 import Card from "../components/card";
 import { GetServerSideProps } from "next";
 import styled from "styled-components";
-import { Posts } from '../interfaces/index' //Func
+import { Posts, Func } from '../interfaces/index'
 import axios from "axios";
 import API from '../APIurl';
-// import { connect } from 'react-redux';
-// import { iRootState, Dispatch } from '../store'
+import { connect } from 'react-redux';
+import { iRootState, Dispatch } from '../store'
 
 function Home({
   posts,
-  // storePosts,
-  // setPosts
+  storePosts,
+  setPosts
 }: {
   posts: Posts[];
-  // storePosts: Posts[];
-  // setPosts: Func;
+  storePosts: Posts[];
+  setPosts: Func;
 }) {
-  // setPosts(posts);
+  setPosts(posts);
   return (
     <Layout>
       <Head>
@@ -28,8 +28,8 @@ function Home({
       <Section>
         <Cards>
           {
-            posts ? ( //storePosts
-              posts.map((el) => ( //storePosts
+            storePosts ? (
+              storePosts.map((el) => (
                 <Card key={el.id} post={el}></Card>
               ))
             ) : ('loading...')
@@ -56,12 +56,12 @@ const Section = styled.section`
   padding-top: 20px;
 `;
 
-// const mapState = (state: iRootState) => ({
-//   storePosts: state.posts
-// })
+const mapState = (state: iRootState) => ({
+  storePosts: state.posts
+})
 
-// const mapDispatch = (dispatch: Dispatch) => ({
-//   setPosts: (data: Posts[]) => dispatch.posts.setPosts(data)
-// })
-export default Home
-// export default connect(mapState, mapDispatch)(Home);
+const mapDispatch = (dispatch: Dispatch): any => ({
+  setPosts: (data: Posts[]) => dispatch.posts.setPosts(data)
+})
+
+export default connect(mapState, mapDispatch)(Home);
