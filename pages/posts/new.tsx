@@ -61,7 +61,7 @@ const Form = styled.article`
   background-color: #f2f2f2;
   padding: 20px;
 `;
-const Input = styled.input`
+const Input = styled.input<any>`
   width: 400px;
   padding: 12px 20px;
   margin: 8px 0;
@@ -72,7 +72,7 @@ const Input = styled.input`
   font: inherit;
   font-size: 16px;
 `;
-const Textarea = styled.textarea`
+const Textarea = styled.textarea<any>`
   min-width: 400px;
   max-width: 400px;
   padding: 12px 20px;
