@@ -3,9 +3,9 @@ export type posts = Posts[];
 export default {
   state: [],
   reducers: {
-    setPosts: (state: posts, payload: posts) => {
-      console.log(state);
-      return payload;
+    setPosts: (state: posts, payload: posts): posts => {
+      state = [...payload]; //мой косяк
+      return state;
     },
   },
 };

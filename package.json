@@ -10,9 +10,6 @@
     "eslint:dump": "eslint --print-config ./.eslintrc.json"
   },
   "dependencies": {
-    "@rematch/core": "^1.4.0",
-    "@types/react-redux": "^7.1.9",
-    "@types/react-truncate": "^2.3.3",
     "axios": "^0.19.2",
     "date-fns": "^2.14.0",
     "detect-node": "^2.0.4",
@@ -29,6 +26,9 @@
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
+    "@rematch/core": "^1.4.0",
+    "@types/react-redux": "^7.1.9",
+    "@types/react-truncate": "^2.3.3",
     "@types/node": "^14.0.1",
     "@types/react": "^16.9.35",
     "@types/styled-components": "^5.1.0",

@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import Head from "next/head";
 import { siteTitle } from "../components/layout";
 import Layout from "../components/layoutHome";
@@ -19,7 +20,9 @@ function Home({
   storePosts: Posts[];
   setPosts: Func;
 }) {
-  setPosts(posts);
+  useEffect(() => {
+    setPosts(posts);
+  }, [])
   return (
     <Layout>
       <Head>
