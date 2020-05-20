@@ -4,7 +4,7 @@ import Layout from "../components/layoutHome";
 import Card from "../components/card";
 import { GetServerSideProps } from "next";
 import styled from "styled-components";
-import { Posts, Func } from '../interfaces/index'
+import { Posts } from '../interfaces/index' //Func
 import axios from "axios";
 import API from '../APIurl';
 // import { connect } from 'react-redux';
