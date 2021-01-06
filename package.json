@@ -10,7 +10,7 @@
     "eslint:dump": "eslint --print-config ./.eslintrc.json"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "date-fns": "^2.14.0",
     "detect-node": "^2.0.4",
     "gray-matter": "^4.0.2",
